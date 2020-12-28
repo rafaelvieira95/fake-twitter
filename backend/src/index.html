@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Socket io</title>
+
+</head>
+<body>
+
+<script src="https://cdn.socket.io/socket.io-3.0.1.min.js" crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+     var socket = io('http://localhost:3001');
+     socket.on('tweet', (data) =>{
+         console.log(data);
+     });
+
+     socket.on('like',(data)=>{
+         console.log(data)
+     });
+
+</script>
+
+</body>
+</html>
